@@ -9,7 +9,7 @@ export const SITE = {
     "Maker Space es un taller de prototipado y espacio colaborativo equipado con herramientas de última generación. Ofrecemos un ambiente ideal para crear, innovar y aprender, con eventos regulares y asesoría técnica personalizada. Perfecto para entusiastas de la tecnología, emprendedores y creadores que buscan llevar sus ideas a la realidad.",
   description_short:
     "Taller de prototipado con equipo avanzado, eventos y asesoría técnica para innovadores y creadores.",
-  url: "https://makerspacegdl.space",
+  url: "https://makerspacegdl.space", // The domain is not closed yet
   author: "Yair Salvador Y0z64",
 };
 
