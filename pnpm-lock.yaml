@@ -24,13 +24,13 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(astro@4.15.9(rollup@4.22.4)(terser@5.33.0)(typescript@5.6.2))(tailwindcss@3.4.13)
       '@preline/accordion':
-        specifier: ^2.4.1
+        specifier: ^2.5.0
         version: 2.5.0
       '@preline/collapse':
-        specifier: ^2.4.1
+        specifier: ^2.5.0
         version: 2.5.0
       '@preline/dropdown':
-        specifier: ^2.4.1
+        specifier: ^2.5.0
         version: 2.5.0
       '@preline/overlay':
         specifier: ^2.4.1
@@ -91,7 +91,7 @@ importers:
         specifier: ^0.14.1
         version: 0.14.1
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.6
+        specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
       typescript:
         specifier: ^5.6.2
