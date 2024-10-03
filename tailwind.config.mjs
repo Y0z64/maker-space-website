@@ -17,8 +17,8 @@ export default {
       neutral: colors.neutral, // Used mainly for text color
       background: "#191919",
       primary: "#322BC3",
-      accent: "#4B46CB",
       secondary: "#082D8F",
+      accent: "#4B46CB",
       muted: "#CCCEF1",
       destructive: colors.red,
       // Old colors, came with the templated, ideally should not be used
