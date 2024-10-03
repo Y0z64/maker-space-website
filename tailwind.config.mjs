@@ -15,6 +15,13 @@ export default {
       gray: colors.gray,
       indigo: colors.indigo,
       neutral: colors.neutral, // Used mainly for text color
+      background: "#191919",
+      primary: "#322BC3",
+      accent: "#4B46CB",
+      secondary: "#082D8F",
+      muted: "#CCCEF1",
+      destructive: colors.red,
+      // Old colors, came with the templated, ideally should not be used
       orange: {
         100: "#ffedd5",
         200: "#fed7aa",
@@ -23,12 +30,6 @@ export default {
         500: "#e14d0b",
         600: "#ea580c",
       }, // Primary colors, used mainly for links, buttons and svg icons
-      background: "#191919",
-      primary: "#322BC3",
-      accent: "#4B46CB",
-      secondary: "#082D8F",
-      muted: "#CCCEF1",
-      destructive: colors.red,
       yellow: {
         50: "#fefce8",
         100: "#fef9c3",
