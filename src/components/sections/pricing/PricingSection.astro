@@ -114,15 +114,15 @@ interface PricingSectionProps {
         <span class="text-6xl font-bold text-neutral-100"
           >{pricing.professionalToolbox.price}</span
         >
-        <span class="text-lg font-bold text-orange-100"
+        <span class="text-lg font-bold text-neutral-100"
           >{pricing.professionalToolbox.cents}</span
         >
-        <span class="ms-3 text-orange-200"
+        <span class="ms-3 text-neutral-200"
           >{pricing.professionalToolbox.billingFrequency}</span
         >
       </div>
       <!-- Features list - automatically created by mapping over `features` array -->
-      <ul class="mb-6 space-y-2 text-orange-100">
+      <ul class="mb-6 space-y-2 text-neutral-100">
         {
           pricing.professionalToolbox.features.map((feature: string) => (
             <li class="flex items-center gap-1.5">
