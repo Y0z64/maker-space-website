@@ -14,13 +14,7 @@ export default {
       white: "#ffffff",
       gray: colors.gray,
       indigo: colors.indigo,
-      neutral: colors.neutral,  // Used mainly for text color
-      yellow: {
-        50: "#fefce8",
-        100: "#fef9c3",
-        400: "#facc15",
-        500: "#eab308",
-      }, // Accent colors, used mainly for star color, heading and buttons
+      neutral: colors.neutral, // Used mainly for text color
       orange: {
         100: "#ffedd5",
         200: "#fed7aa",
@@ -29,6 +23,17 @@ export default {
         500: "#e14d0b",
         600: "#ea580c",
       }, // Primary colors, used mainly for links, buttons and svg icons
+      background: "#191919",
+      primary: "#322BC3",
+      secondary: "#082D8F",
+      muted: "#CCCEF1",
+      destructive: colors.red,
+      yellow: {
+        50: "#fefce8",
+        100: "#fef9c3",
+        400: "#facc15",
+        500: "#eab308",
+      }, // Accent colors, used mainly for star color, heading and buttons
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow
     },
