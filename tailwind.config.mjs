@@ -25,7 +25,7 @@ export default {
       }, // Primary colors, used mainly for links, buttons and svg icons
       background: "#191919",
       primary: "#322BC3",
-      accent: "#3832C5",
+      accent: "#4B46CB",
       secondary: "#082D8F",
       muted: "#CCCEF1",
       destructive: colors.red,
