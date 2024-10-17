@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import colors from "tailwindcss/colors";
+import starlightPlugin from "@astrojs/starlight-tailwind";
 
 const accent = {
   200: "#4B46CB",
@@ -57,6 +58,5 @@ export default {
     require("tailwindcss/nesting"),
     require("preline/plugin"),
     require("@tailwindcss/forms"),
-    require("@astrojs/starlight-tailwind"),
   ],
 };

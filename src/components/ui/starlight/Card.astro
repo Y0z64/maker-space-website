@@ -13,7 +13,7 @@ interface Props {
 const { icon, title, url, iconClass } = Astro.props;
 ---
 
-<a class="hover:text-gray-700 dark:text-white" href={url}>
+<a class="hover:text-gray-700 dark:text-white no-underline" href={url}>
   <article
     class="card sl-flex transition-colors duration-200 hover:border-white"
   >
@@ -25,7 +25,7 @@ const { icon, title, url, iconClass } = Astro.props;
       }
       <span set:html={title} />
     </p>
-    <div class="body text-white"><slot /></div>
+    <div class="body "><slot /></div>
   </article>
 </a>
 

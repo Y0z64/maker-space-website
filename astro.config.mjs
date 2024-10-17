@@ -44,16 +44,11 @@ export default defineConfig({
       // If only an Astro i18n configuration is provided, the Starlight i18n configuration is updated to match it.
       // If both an Astro and Starlight i18n configurations are provided, an error is thrown.
       locales: {
-        root: {
+        root: { label: "Español", lang: "es" },
+        in: {
           label: "English",
           lang: "en",
         },
-        de: { label: "Deutsch", lang: "de" },
-        es: { label: "Español", lang: "es" },
-        fa: { label: "Persian", lang: "fa", dir: "rtl" },
-        fr: { label: "Français", lang: "fr" },
-        ja: { label: "日本語", lang: "ja" },
-        "zh-cn": { label: "简体中文", lang: "zh-CN" },
       },
       // https://starlight.astro.build/guides/sidebar/
       sidebar: [
@@ -85,8 +80,9 @@ export default defineConfig({
           autogenerate: { directory: "advanced" },
         },
       ],
+      // TODO: Crear un github donde guardar la documentacion para el maker
       social: {
-        github: "https://github.com/mearashadowfax/ScrewFast",
+        github: "https://github.com/Y0z64",
       },
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],
@@ -114,6 +110,9 @@ export default defineConfig({
           },
         },
       ],
+    }),
+    tailwind({
+      applyBaseStyles: false
     }),
     compressor({
       gzip: false,
