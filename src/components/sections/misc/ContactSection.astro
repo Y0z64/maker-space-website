@@ -7,12 +7,15 @@ import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astr
 import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
+import AvatarTestimonialSection from "@/components/ui/avatars/AvatarTestimonialSection.astro";
+import AvatarAboutUs from "@/components/ui/avatars/AvatarAboutUs.astro";
+import CardPresentation from "@/components/ui/cards/CardPresentation.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Agenda una cita aqui";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-const formTitle: string = "Fill in the form below";
+  "Necesitas ayuda o asesoria en tu proyecto? Agenda una cita con un Maker.";
+const formTitle: string = "Agenda una cita";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 ---
 
@@ -39,7 +42,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         </h2>
         <!-- Form for user input with various input fields.-->
         <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
-        <form>
+        <!-- <form>
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
@@ -71,47 +74,88 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
               {formSubTitle}
             </p>
           </div>
-        </form>
+        </form> -->
+        <img src="src/images/calendlyqr.png" alt="QR code get an apointment" />
+        <a
+          type="submit"
+          href="https://calendly.com/makergdl/asistencia-o-asesoria-en-maker-space"
+          class={"inline-flex mt-3 w-full items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-200 focus-visible:ring outline-none transition duration-300 border border-transparent bg-primary dark:focus:outline-none hover:bg-accent-500 2xl:text-base disabled:pointer-events-none disabled:opacity-50 ring-zinc-500 dark:ring-zinc-200"}
+          >{title}</a
+        >
       </div>
 
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Documentacion"
+          content="Explora las guias y tutoriales sobre el equipo del maker space."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
-          linkURL="#"
+          linkTitle="Ir a la documentacion"
+          linkURL="/welcome-to-docs"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          heading="Blog"
+          content="Puedes encontrar ejemplos de proyectos realizados en el maker en nuestro blog."
           isLinkVisible={true}
-          linkTitle="Visit FAQ"
-          linkURL="#"
+          linkTitle="Ir al blog"
+          linkURL="/blog"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
+          heading="Ubicacion del Maker Space"
+          content="3er piso del edificio de negocios del Tec de Monterrey campus GDA"
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Edicificio que esta frente al Centro de congresos"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
-        <ContactIconBlock
+        <!-- <ContactIconBlock
           heading="Contact us by email"
           content="Prefer the written word? Drop us an email at"
           isLinkVisible={true}
           linkTitle="support@screwfast.uk"
           linkURL="#"
           ><Icon name="envelopeOpen" />
-        </ContactIconBlock>
+        </ContactIconBlock> -->
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+  <div class="mx-auto max-w-2xl lg:max-w-5xl">
+    <div class="text-left lg:ml-6">
+      <h1
+        class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+      >
+        Conoce a los makers
+      </h1>
+      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+        {subTitle}
+      </p>
+      <div
+        class="mt-12 flex flex-col items-center justify-around gap-6 lg:grid-cols-2 lg:flex-row lg:gap-16"
+      >
+        <CardPresentation
+          socials={[{ icon: "github", url: "https://www.github.com/Y0z64" }]}
+          name="Yair Salvador"
+          title="Software developer"
+          src="src/images/blog/yair.webp"
+          alt="Anna"
+        />
+        <CardPresentation
+          socials={[
+            { icon: "github", url: "https://github.com/andresdanielmtz" },
+          ]}
+          name="Andres Martinez"
+          title="Software developer"
+          src="src/images/blog/andres.webp"
+          alt="Anna"
+        />
       </div>
     </div>
   </div>

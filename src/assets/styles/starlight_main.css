@@ -20,16 +20,6 @@
   --border: hsla(var(--border-accent), 0.4);
 }
 
-.page {
-  background:
-    linear-gradient(215deg, var(--overlay-accent), transparent 40%),
-    radial-gradient(var(--overlay-accent), transparent 40%) no-repeat center
-      center / cover,
-    radial-gradient(var(--overlay-accent), transparent 65%) no-repeat center
-      center / cover;
-  background-blend-mode: overlay;
-}
-
 header {
   border: none !important;
   padding: 0 !important;

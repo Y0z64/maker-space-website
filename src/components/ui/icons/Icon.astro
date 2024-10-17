@@ -1,4 +1,5 @@
 ---
+import cn from "@/utils/cn";
 import { Icons } from "./icons.ts";
 
 interface Path {
@@ -6,7 +7,12 @@ interface Path {
   class?: string;
 }
 
-const { name } = Astro.props;
+interface Props {
+  name: string;
+  className?: string;
+}
+
+const { name, className } = Astro.props;
 
 let icon = (Icons as any)[name] || {};
 
@@ -16,7 +22,7 @@ let paths: Path[] = icon.paths || [];
 {
   icon ? (
     <svg
-      class={icon.class}
+      class={cn(icon.class, className)}
       height={icon.height}
       viewBox={icon.viewBox}
       width={icon.width}
