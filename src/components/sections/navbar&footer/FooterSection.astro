@@ -13,13 +13,13 @@ const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 
 // Define the variables that will be used in this component
 const sectionThreeTitle: string =
-  Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
+  Astro.currentLocale === "fr" ? "Rester à jour" : "Agenda una cita";
 const sectionThreeContent: string =
   Astro.currentLocale === "fr"
     ? "Restez informé des derniers outils et des offres exclusives."
-    : "Stay updated with the latest tools and exclusive deals.";
+    : "";
 const crafted: string =
-  Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+  Astro.currentLocale === "fr" ? "Fabriqué par" : "Hecho por";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -60,16 +60,12 @@ const crafted: string =
       }
 
       <div class="col-span-2">
-        <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
-          {sectionThreeTitle}
-        </h3>
-
-        <form>
-          <EmailFooterInput />
-          <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-            {sectionThreeContent}
-          </p>
-        </form>
+          <a
+            type="submit"
+            href="https://calendly.com/makergdl/asistencia-o-asesoria-en-maker-space"
+            class={"inline-flex mt-3 w-full items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-200 focus-visible:ring outline-none transition duration-300 border border-transparent bg-primary dark:focus:outline-none hover:bg-accent-500 2xl:text-base disabled:pointer-events-none disabled:opacity-50 ring-zinc-500 dark:ring-zinc-200"}
+            >{"Agenda una cita"}</a
+          >
       </div>
     </div>
 
@@ -82,9 +78,9 @@ const crafted: string =
           {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://sobstvennoai.dev"
+            href="https://www.github.com/Y0z64"
             target="_blank"
-            rel="noopener noreferrer">sobstvennoAI</a
+            rel="noopener noreferrer">Y0z64</a
           >.
         </p>
       </div>
