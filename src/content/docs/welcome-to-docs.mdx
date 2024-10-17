@@ -1,48 +1,45 @@
 ---
-title: ScrewFast Docs
+title: Documentación Maker Space
 head:
   - tag: title
-    content: ScrewFast Docs
-description: Explore ScrewFast's comprehensive documentation for an in-depth look at our premium tools and construction services. 
+    content: Documentación Maker Space
+description: Explora la documentación completa de nuestro Maker Space para aprender a usar el equipo y desarrollar nuevas habilidades.
 template: splash
 editUrl: false
 lastUpdated: false
 next: false
 hero:
-  title: Welcome to ScrewFast Docs
-  tagline: Your central hub for streamlined tool guidance, detailed service docs, and project support.
+  title: Maker Space docs
+  tagline: Tu centro de recursos para guías de uso de equipos, tutoriales y apoyo en proyectos.
   image:
-    # alt: A ScrewFast's Logo
-    # dark: ../../images/starlight/maker_logo_dark.svg
-    # light: ../../images/starlight/maker_logo_hero.svg
-    html: <img src="../../src/images/starlight/maker_logo_dark.svg" alt="Maker logo" class="h-fit aspect-square"/>
+    html: <img src="../../src/images/starlight/maker_logo_dark.svg" alt="Logo Maker Space" class="h-fit aspect-square"/>
   actions:
-    - text: Get started
+    - text: Comenzar
       icon: right-arrow
       variant: primary
       link: /guides/getting-started/
-    - text: View on GitHub
+    - text: Ver en GitHub
       icon: external
-      link: https://github.com/mearashadowfax/ScrewFast
+      link: https://github.com/tu-universidad/maker-space-docs
 ---
 import "@styles/starlight_main.css";
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import Card from "src/components/ui/starlight/Card.astro";
 
 <CardGrid stagger>
-
-  <Card title="Quick Start Guides" icon="document">
-    Get up and running swiftly with our straightforward and concise guides, tailored for new users and seasoned experts alike.
+  <Card title="Guías de Inicio Rápido" icon="document" url="/guides/getting-started" iconClass="bg-green-400/75 border-green" >
+    Comienza rápidamente con nuestras guías concisas, diseñadas tanto para nuevos usuarios como para expertos en el uso de nuestro equipamiento.
   </Card>
 
-  <Card title="Tools & Equipment" icon="seti:eslint">
-    Discover the complete lineup of ScrewFast's superior quality tools and equipment. Each subsection offers detailed specifications, usage instructions, and maintenance tips.
+  <Card title="Maquinaria y Equipo" icon="seti:eslint">
+    Descubre nuestra gama completa de maquinaria y equipo. Cada sección ofrece especificaciones detalladas, instrucciones de uso y consejos de mantenimiento.
   </Card>
 
-   <Card title="Construction Services" icon="seti:puppet">
-    Discover the complete lineup of ScrewFast's superior quality tools and equipment. Each subsection offers detailed specifications, usage instructions, and maintenance tips.
+  <Card title="Tutoriales Básicos" icon="seti:puppet" iconClass="border-purple-400 bg-purple-400/75">
+    Aprende habilidades fundamentales con nuestros tutoriales. Desde soldadura hasta programación con Arduino, te ayudamos a dar tus primeros pasos en diversas áreas tecnológicas.
   </Card>
 
-   <Card title="Advanced Topics" icon="seti:terraform">
-    Discover the complete lineup of ScrewFast's superior quality tools and equipment. Each subsection offers detailed specifications, usage instructions, and maintenance tips.
+  <Card title="Proyectos Avanzados" icon="seti:terraform" iconClass="bg-blue-400/75 border-blue">
+    Explora proyectos más complejos y aprende técnicas avanzadas. Ideal para aquellos que buscan llevar sus habilidades al siguiente nivel.
   </Card>
 </CardGrid>

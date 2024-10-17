@@ -1,29 +1,29 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Resolvemos tus dudas sobre nuestro espacio y servicios con respuestas claras y precisas.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "¿Qué tipos de proyectos puedo realizar en Maker Space?",
+      "answer": "En Maker Space puedes realizar una amplia variedad de proyectos, desde impresión 3D y corte láser hasta proyectos de electrónica y programación. Nuestro espacio está equipado para apoyar proyectos de emprendimiento, prototipado, académicos y personales."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "¿Necesito experiencia previa para usar las herramientas del Maker Space?",
+      "answer": "No se requiere experiencia previa. Ofrecemos capacitación y asesoría para todos los niveles, desde principiantes hasta usuarios avanzados. Nuestro equipo te guiará en el uso seguro y efectivo de todas las herramientas."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "¿Cómo puedo reservar tiempo en el Maker Space?",
+      "answer": "Puedes reservar tiempo en nuestras instalaciones a través de nuestro Calendly en la seccion de Contacto."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "¿Qué tipo de apoyo ofrecen para proyectos de emprendimiento?",
+      "answer": "Para proyectos de emprendimiento, ofrecemos asesoría especializada, acceso a herramientas de prototipado rápido, y conexiones con mentores. "
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "¿Proporcionan los materiales para los proyectos?",
+      "answer": "Sí, proporcionamos una variedad de materiales básicos como filamento para impresión 3D, componentes electrónicos y materiales para corte láser. Para proyectos específicos, podemos ayudarte a sourcing de materiales especializados."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "¿Ofrecen cursos o talleres para aprender nuevas habilidades?",
+      "answer": "Organizamos workshops y cursos sobre temas como impresión 3D, programación de Arduino, diseño para corte láser, y más. Estos están diseñados para todos los niveles. Estate atento a nuestros eventos para ver cuando se llevarán a cabo."
     }
   ]
 }

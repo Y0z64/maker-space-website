@@ -3,21 +3,22 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import Equipement from "@components/sections/features/Equipement";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/blob.webp";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
-import pricing from "@data/pricing.json";
 import banner from "@images/banner.webp";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
+
+import printer from "@images/3dprint.webp";
+import laser from "@images/lasercut.webp";
+import cnc from "@images/cnc.webp";
+import vinil_cutter from "@images/vinil_cutter.webp";
+import arduino from "@images/arduino.webp";
+import tools from "@images/tools.webp";
+import code from "@images/code.webp";
 
 import yairAvatar from "@/images/blog/yair.webp";
 import andresAvatar from "@/images/blog/andres.webp";
@@ -35,66 +36,106 @@ const avatarSrcs: Array<string | ImageMetadata> = [yairAvatar, andresAvatar];
   <HeroSection
     title=`Empieza a crear en <span
         class="text-white rounded-lg pl-1 pr-2 bg-primary">Maker Space</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Empieza a explorar"
+    subTitle="Herramientas, equipo y asesoría experta para todos tus proyectos de innovación y tecnología."
+    primaryBtn="Explora nuestros servicios"
     primaryBtnURL="/blog"
-    secondaryBtn="Contactanos"
+    secondaryBtn="Contáctanos"
     secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    reviews=`De más de <span class="font-bold">500</span> opiniones`
     src={heroImage}
-    alt="Elemento visual abstracto del instituto de emprendimiento"
+    alt="Elemento visual abstracto del Maker Space universitario"
   />
 
-  <ClientsSection
+  <!-- No modificar -->
+  <!-- <ClientsSection
     title="Trusted by Industry Leaders"
     subTitle="Experience the reliability chosen by industry giants."
-  />
+  /> -->
 
-  <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
-    src={banner}
-    alt="ScrewFast products in floating boxes"
-    features={features}
-  />
-
-  <FeaturesNavs
-    title=`Customize <span class="text-accent-200 dark:text-accent-200">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+  <!-- En esta seccion pon no solo el equipamiento del espacio y las maneras en las que te ponemos ayudar en el -->
+  <!-- Impresoras 3d, Cortadora Laser, CNC, Cortadora de Vinil, Arduino, Varias herramientas (soldadura, madera, electronica), Programacion -->
+  <Equipement
+    client:load
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
+        heading: "Impresoras 3D",
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+          "Da vida a tus diseños con nuestras impresoras 3D de última generación. Te proporcionamos el filamento y asesoría para tus proyectos.",
         svg: "tools",
-        src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+        src: printer.src,
+        alt: "Impresora 3D en funcionamiento",
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
+        heading: "Cortadora Láser",
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
-        second: true,
+          "Realiza cortes precisos en diversos materiales con nuestra cortadora láser. Ofrecemos guía para optimizar tus diseños.",
+        svg: "tools",
+        src: laser.src,
+        alt: "Cortadora láser en acción",
       },
       {
-        heading: "Robust Features",
+        heading: "CNC",
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: "house",
-        src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+          "Crea piezas complejas con nuestra máquina CNC. Ideal para proyectos que requieren alta precisión en madera o metal.",
+        svg: "tools",
+        src: cnc.src,
+        alt: "Máquina CNC trabajando en un proyecto",
+      },
+      {
+        heading: "Cortadora de Vinilo",
+        content:
+          "Diseña y corta vinilos para tus proyectos gráficos o de personalización. Perfecta para stickers y rotulación.",
+        svg: "tools",
+        src: vinil_cutter.src,
+        alt: "Cortadora de vinilo en uso",
+      },
+      {
+        heading: "Arduino",
+        content:
+          "Explora la electrónica y programación con nuestros kits de Arduino. Aprende a crear proyectos interactivos desde cero.",
+        svg: "tools",
+        src: arduino.src,
+        alt: "Estudiantes trabajando con placas Arduino",
+      },
+      {
+        heading: "Herramientas Diversas",
+        content:
+          "Accede a herramientas para soldadura, carpintería y electrónica. Todo lo necesario para materializar tus ideas.",
+        svg: "tools",
+        src: tools.src,
+        alt: "Variedad de herramientas disponibles en el Maker Space",
+      },
+      {
+        heading: "Programación",
+        content:
+          "Desarrolla tus habilidades de coding con nuestros recursos y asesoría en diversos lenguajes de programación.",
+        svg: "tools",
+        src: code.src,
+        alt: "Estación de trabajo para programación",
       },
     ]}
+  >
+    Descubre todo lo que <span class="text-primary dark:text-accent-200"
+      >Maker Space</span
+    > tiene para ofrecerte en tu viaje creativo.
+  </Equipement>
+
+  <!-- Explicar en esta seccion que cualquiera es bienvenido a trabajar en el espacio, incluyendo para proyectos de empredimiento, prototipado, proyectos personales y prototipado -->
+  <FeaturesGeneral
+    title="Un espacio para todos los creadores"
+    subTitle="En Maker Space, damos la bienvenida a todos los que deseen dar vida a sus ideas. Ya sea para proyectos de emprendimiento, prototipado, proyectos personales o académicos, estamos aquí para apoyarte en cada paso del camino."
+    alt="Estudiantes trabajando en diversos proyectos en Maker Space"
+    features={features}
+    src={banner}
   />
 
-  <TestimonialsSection
+  <!-- No se que agregar aqui -->
+  <!-- <TestimonialsSection
     title="Fast-Track Your Projects"
     subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
     ;
@@ -129,15 +170,18 @@ const avatarSrcs: Array<string | ImageMetadata> = [yairAvatar, andresAvatar];
         description: "quicker assembly using innovative fastening solutions",
       },
     ]}
-  />
+  /> -->
 
-  <PricingSection pricing={pricing} />
+  <!-- No cambiar esto -->
+  <!-- <PricingSection pricing={pricing} /> -->
 
+  <!-- Agrega preguntas comunes aqui que puedan llegar a surgir en un espacio como este -->
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
+  <!-- No cambiar esto -->
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Contactanos o agenda una cita"
+    subTitle="Si quieres utilizar el espacio o necesitas asesoria en tu proyecto, no dudes en contactarnos."
+    url="/contact"
   />
 </MainLayout>

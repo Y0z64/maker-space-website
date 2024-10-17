@@ -23,6 +23,7 @@ const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 // Get all insights posts
+// TODO: Cambiar insights a eventos y talleres
 const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
 
 // Separate the most recent post from others
@@ -30,12 +31,12 @@ const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
 // Define variables for page content
-const title: string = "Your Gateway to Construction Excellence";
+const title: string = "Explora la Innovación en Maker Space";
 const subTitle: string =
-  "Explore the latest news, tips, and insights from ScrewFast to enhance your construction projects. From product spotlights to project management strategies, our blog is your go-to resource for all things hardware and construction.";
-const secondTitle: string = "Insights";
+  "Descubre los últimos proyectos, noticias y eventos de nuestro Maker Space. Desde impresiones 3D hasta prototipos electrónicos, nuestro blog es tu ventana al mundo de la creación y la innovación tecnológica.";
+const secondTitle: string = "Eventos y Talleres";
 const secondSubTitle: string =
-  "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts. ";
+  "Mantente al día con los próximos eventos, talleres y oportunidades de aprendizaje en nuestro Maker Space. ¡No te pierdas la oportunidad de participar y aprender nuevas habilidades!";
 
 const pageTitle: string = `Blog | ${SITE.title}`;
 ---
@@ -49,15 +50,15 @@ const pageTitle: string = `Blog | ${SITE.title}`;
     url: "https://screwfast.uk/blog",
     name: "Blog | ScrewFast",
     description:
-      "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.",
+      "Explora los últimos proyectos, noticias y eventos de nuestro Maker Space universitario. Descubre la innovación en acción.",
     isPartOf: {
       "@type": "WebSite",
       url: "https://screwfast.uk",
       name: "ScrewFast",
       description:
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Maker Space ofrece herramientas de alta tecnología y servicios de asesoría para proyectos innovadores y creativos.",
     },
-    inLanguage: "en-US",
+    inLanguage: "en-MX",
   }}
 >
   <section

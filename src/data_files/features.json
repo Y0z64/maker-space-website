@@ -1,22 +1,22 @@
 [
   {
-    "heading": "Dedicated Teams",
-    "content": "Benefit from our committed teams who ensure your success is personal. Count on expert guidance and exceptional results throughout your project journey.",
+    "heading": "Asesoría Personalizada",
+    "content": "Nuestro equipo de expertos está listo para guiarte en cada etapa de tu proyecto, desde la conceptualización hasta la implementación final.",
     "svg": "groups"
   },
   {
-    "heading": "Simplicity and Affordability",
-    "content": "Find easy-to-use, affordable solutions with ScrewFast's line of tools and equipment. Our products make procurement simple and keep projects within budget.",
+    "heading": "Accesibilidad para Todos",
+    "content": "Ofrecemos acceso a herramientas y tecnologías avanzadas a precios asequibles para estudiantes, facilitando la innovación sin barreras económicas.",
     "svg": "verified"
   },
   {
-    "heading": "Comprehensive Documentation",
-    "content": "Integrate with ease using ScrewFast's exhaustive guides and libraries. Achieve seamless product adoption with our full suite of documentation designed for your success.",
+    "heading": "Recursos y Tutoriales",
+    "content": "Accede a nuestra biblioteca de recursos, tutoriales y workshops para ampliar tus conocimientos y habilidades en diversas áreas tecnológicas.",
     "svg": "books"
   },
   {
-    "heading": "User-Centric Design",
-    "content": "Experience the difference with ScrewFast's user-focused design — where functionality meets practicality for an enhanced work experience.",
+    "heading": "Ambiente Colaborativo",
+    "content": "Disfruta de un espacio diseñado para fomentar la creatividad, el intercambio de ideas y la colaboración entre estudiantes de diferentes disciplinas.",
     "svg": "frame"
   }
 ]
