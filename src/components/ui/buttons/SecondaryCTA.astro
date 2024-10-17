@@ -1,11 +1,14 @@
 ---
+import cn from "@/utils/cn";
+
 // Destructure the properties from Astro.props
-const { title, url } = Astro.props;
+const { title, url, className } = Astro.props;
 
 // Define TypeScript interface for the properties
 interface Props {
   title?: string;
   url?: string;
+  className?: string;
 }
 // Define CSS classes for the hyperlink button
 const baseClasses =
@@ -24,7 +27,10 @@ const darkClasses =
 
 <!-- Styled hyperlink -->
 <a
-  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${hoverClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses} ${darkClasses}`}
+  class={cn(
+    `${baseClasses} ${borderClasses} ${bgColorClasses} ${hoverClasses} ${disableClasses} ${fontSizeClasses} ${ringClasses} ${darkClasses}`,
+    className
+  )}
   href={url}
 >
   {title}
