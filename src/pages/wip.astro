@@ -1,0 +1,34 @@
+---
+import Btn404 from "@/components/ui/buttons/Btn404.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+
+---
+
+<MainLayout title={"En progreso"}>
+  <section class="grid h-svh place-content-center">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+      <div class="mx-auto max-w-screen-sm text-center">
+        <h1
+          class="text-dark mb-4 text-7xl font-extrabold text-primary dark:text-accent-200 tracking-wider lg:text-9xl"
+        >
+          WIP
+        </h1>
+        <p
+          id="subtitle"
+          class="mb-4 text-balance text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 md:text-4xl"
+        >
+          En progreso...
+        </p>
+        <p
+          id="content"
+          class="mb-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
+        >
+          Esta pagina esta en construccion, por favor regresa mas tarde.
+        </p>
+        <!-- Display a button that navigates user back to the previous page -->
+        <Btn404 title={"Volver atras"} id="go-back" />
+      </div>
+    </div>
+  </section>
+</MainLayout>
