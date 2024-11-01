@@ -35,18 +35,6 @@ export default defineConfig({
     starlight({
       title: "MakerSpace docs",
       defaultLocale: "root",
-      // locales: {
-      //   // Spanish as default (root) locale
-      //   root: {
-      //     label: "Español",
-      //     lang: "es",
-      //   },
-      //   // English at /en path
-      //   en: {
-      //     label: "English",
-      //     lang: "en",
-      //   },
-      // },
       sidebar: [
         {
           label: "Guías de Inicio Rápido",
@@ -56,15 +44,14 @@ export default defineConfig({
           autogenerate: { directory: "guides" },
         },
         {
-          label: "Tools & Equipment",
+          label: "Equipo y Herramientas",
+          translations: {
+            en: "Tools & Equipment"
+          },
           items: [
-            { label: "Tool Guides", link: "tools/tool-guides/" },
-            { label: "Equipment Care", link: "tools/equipment-care/" },
+            { label: "Equipo", link: "tools/tool-guides/" },
+            { label: "Mantenimiento", link: "tools/equipment-care/" },
           ],
-        },
-        {
-          label: "Construction Services",
-          autogenerate: { directory: "construction" },
         },
         {
           label: "Advanced Topics",
