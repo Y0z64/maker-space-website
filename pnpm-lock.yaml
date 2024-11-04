@@ -103,8 +103,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.13)
       astro-vtbot:
-        specifier: ^1.9.4
-        version: 1.9.4
+        specifier: ^1.10.6
+        version: 1.10.6
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -1007,11 +1007,17 @@ packages:
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
 
-  '@vtbag/element-crossing@1.0.1':
-    resolution: {integrity: sha512-UgZZOyeof2zainGD9FYjVqkwK8gvsv8ABVC5YA1iSlyt39c+2Fz7WRGBHiE/9Vqb22DpZTqF87ArHqkxG7+Y9g==}
+  '@vtbag/cam-shaft@1.0.1':
+    resolution: {integrity: sha512-9lSaxaT4sLX6mvcf4ixGgvT3EuUQAVCF7oSZcoj0tLRBdDM0W7ABZwvjqT37zX2omWaqDWavddmVuK6hu1DZnQ==}
 
-  '@vtbag/inspection-chamber@1.0.13':
-    resolution: {integrity: sha512-TEj8D405pT0uqtvxvTsGDPYe/gYbxs+gXFm63cdw3KV9jOlZiVRhNoDXtl/KGQSSNjk+M6Y03Dq9IlzSppBNKg==}
+  '@vtbag/element-crossing@1.0.3':
+    resolution: {integrity: sha512-veAN03yabaUSKaoeaHUu0mSpAqzsUAmnrxlOy75OhqZZ4y3+GHR3vBFZIUSfwSYpFfBfRDSbxyfapkPiQsKZmw==}
+
+  '@vtbag/inspection-chamber@1.0.17':
+    resolution: {integrity: sha512-MDtO+qNtd4AkxjkJpQD3N2YhMQUaEdSkdArwk7Cy/81iMbOXhZek6cRQu06jn6JnrRv4andtb1oHtl5rYuNSSQ==}
+
+  '@vtbag/turn-signal@1.1.0':
+    resolution: {integrity: sha512-2WoBbs3v7hWxu6BXvWab4G8MJIFr21vEcJ5Y4mhXlYifVzHLSf5M+aHxEEk62DMOeVmjHwqt8DK47GYnFrEqmg==}
 
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
@@ -1104,8 +1110,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^3.3.0
 
-  astro-vtbot@1.9.4:
-    resolution: {integrity: sha512-1rQ33QNZ6z+2+pxnPrCtrv2yVvGiTE+0YjeWOj55fOFtw9HelGp8QXu8YvBWtD3WtNGWDnpLcYoCSY4bPGUkHA==}
+  astro-vtbot@1.10.6:
+    resolution: {integrity: sha512-kMYJEMuEw52xistawd6Y1PZKsDtxVTaLwS1ajMwtph75XmkTnqXlUHJ9/AEa4ezsNplkyRpba5kjchiN6CV6pg==}
 
   astro@4.16.5:
     resolution: {integrity: sha512-v8mKWcEPN7hkfyVsMFWV0F8UgL4GUJKT172KTB7dePO3yJb64HBwCckC0QnA60QQh3jK6+2xwyWEc5QvCeqjtg==}
@@ -1411,6 +1417,9 @@ packages:
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
+
+  eruda@3.4.0:
+    resolution: {integrity: sha512-MSPJUwdKX8gJuWXzlKN0YcZUm8+XAMtntW+tmnvEpb1hUVQRxMiB/lxrqkuOBQ/SQJRXpIP1E0cADsRZMDjpXg==}
 
   es-module-lexer@1.5.4:
     resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
@@ -4205,9 +4214,15 @@ snapshots:
 
   '@vscode/l10n@0.0.18': {}
 
-  '@vtbag/element-crossing@1.0.1': {}
+  '@vtbag/cam-shaft@1.0.1': {}
 
-  '@vtbag/inspection-chamber@1.0.13': {}
+  '@vtbag/element-crossing@1.0.3': {}
+
+  '@vtbag/inspection-chamber@1.0.17':
+    dependencies:
+      eruda: 3.4.0
+
+  '@vtbag/turn-signal@1.1.0': {}
 
   abbrev@1.1.1: {}
 
@@ -4287,10 +4302,12 @@ snapshots:
       astro: 4.16.5(rollup@4.22.4)(terser@5.33.0)(typescript@5.6.2)
       rehype-expressive-code: 0.35.6
 
-  astro-vtbot@1.9.4:
+  astro-vtbot@1.10.6:
     dependencies:
-      '@vtbag/element-crossing': 1.0.1
-      '@vtbag/inspection-chamber': 1.0.13
+      '@vtbag/cam-shaft': 1.0.1
+      '@vtbag/element-crossing': 1.0.3
+      '@vtbag/inspection-chamber': 1.0.17
+      '@vtbag/turn-signal': 1.1.0
 
   astro@4.16.5(rollup@4.22.4)(terser@5.33.0)(typescript@5.6.2):
     dependencies:
@@ -4639,6 +4656,8 @@ snapshots:
   emoji-regex@9.2.2: {}
 
   entities@4.5.0: {}
+
+  eruda@3.4.0: {}
 
   es-module-lexer@1.5.4: {}
 
