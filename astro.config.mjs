@@ -4,8 +4,12 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
+import { remarkAlert } from "remark-github-blockquote-alert";
 
 export default defineConfig({
+  markdown: {
+    remarkPlugins: [remarkAlert],
+  },
   site: "https://screwfast.uk",
   image: {
     domains: ["images.unsplash.com"],
@@ -43,19 +47,22 @@ export default defineConfig({
           },
           autogenerate: { directory: "guides" },
         },
-        {
-          label: "Equipo y Herramientas",
-          translations: {
-            en: "Tools & Equipment"
-          },
-          items: [
-            { label: "Equipo", link: "tools/tool-guides/" },
-            { label: "Mantenimiento", link: "tools/equipment-care/" },
-          ],
-        },
-        {
-          label: "Advanced Topics",
-          autogenerate: { directory: "advanced" },
+        // {
+        //   label: "Equipo y Herramientas",
+        //   translations: {
+        //     en: "Tools & Equipment"
+        //   },
+        //   items: [
+        //     { label: "Equipo", link: "tools/tool-guides/" },
+        //     { label: "Mantenimiento", link: "tools/equipment-care/" },
+        //   ],
+        // },
+        // {
+        //   label: "Advanced Topics",
+        //   autogenerate: { directory: "advanced" },
+        // },
+        { label: "Impresora 3D",
+          autogenerate: { directory: "3d-printer"},
         },
       ],
       social: {

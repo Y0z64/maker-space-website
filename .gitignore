@@ -24,3 +24,5 @@ pnpm-debug.log*
 # obsidian
 .obsidian/
 .obsidian
+.trash/
+.trash

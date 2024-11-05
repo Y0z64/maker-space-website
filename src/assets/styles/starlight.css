@@ -82,20 +82,6 @@ article.card {
     border-radius: 0.5rem;
 }
 
-.starlight-aside--tip {
-    background: linear-gradient(45deg, #322BC3, #6C69D5 );
-    border: none;
-    border-radius: 0.5rem;
-    color: white
-}
-
-.starlight-aside--note {
-    background: linear-gradient(45deg, #00b4db, #2193b0);
-    border: none;
-    border-radius: 0.5rem;
-    color: #004558;
-}
-
 .starlight-aside__icon {
     transform: scale(0.8);
 }
