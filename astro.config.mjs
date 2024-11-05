@@ -6,17 +6,23 @@ import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 import { remarkAlert } from "remark-github-blockquote-alert";
 
+import vercel from "@astrojs/vercel/serverless";
+
 export default defineConfig({
   markdown: {
     remarkPlugins: [remarkAlert],
   },
+
   site: "https://screwfast.uk",
+
   image: {
     domains: ["images.unsplash.com"],
   },
+
   redirects: {
     "/docs": "/welcome-to-docs",
   },
+
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],
@@ -24,7 +30,9 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+
   prefetch: true,
+
   integrations: [
     tailwind(),
     sitemap({
@@ -61,9 +69,7 @@ export default defineConfig({
         //   label: "Advanced Topics",
         //   autogenerate: { directory: "advanced" },
         // },
-        { label: "Impresora 3D",
-          autogenerate: { directory: "3d-printer"},
-        },
+        { label: "Impresora 3D", autogenerate: { directory: "3d-printer" } },
       ],
       social: {
         github: "https://github.com/Y0z64",
@@ -104,7 +110,11 @@ export default defineConfig({
     }),
     react(),
   ],
-  output: "static",
+  output: "server",
+  adapter: vercel({
+    isr: true,
+    expiration: 60 * 60 * 24,
+  }),
   experimental: {
     clientPrerender: true,
     directRenderScript: true,

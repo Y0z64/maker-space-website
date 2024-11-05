@@ -22,8 +22,10 @@ import code from "@images/code.webp";
 
 import yairAvatar from "@/images/blog/yair.webp";
 import andresAvatar from "@/images/blog/andres.webp";
+import type { ImageMetadata } from "astro";
 
-const avatarSrcs: Array<string | ImageMetadata> = [yairAvatar, andresAvatar];
+// @ts-expect-error - Required for type checking
+const avatarSrcs: Array<string> = [yairAvatar, andresAvatar];
 ---
 
 <MainLayout>
